@@ -1,0 +1,21 @@
+.heading {
+    font-size: 25px;
+    width: 100%;
+    margin: 0px;
+    box-shadow: 5px 5px 5px yellowgreen;
+}
+
+.note {
+    color: black;
+    font-size: 15px;
+}
+
+.copyright_footer {
+    position: fixed;
+    color: lime;
+    bottom: 0px;
+    background-color: yellow;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+}
