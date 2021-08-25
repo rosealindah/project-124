@@ -1,3 +1,6 @@
+var lw_X = 0;
+var rw_X = 0;
+
 function preload() {
 
 };
@@ -13,13 +16,36 @@ function setup() {
 };
 
 function draw() {
-    background("lavender")
+    background("lavender");
+    textsize(difference);
+    fill("#f4fc05");
+    text('akshita', 50, 400);
+
+
 };
 
 function modelloaded() {
-    console.log("model has been loaded")
+    console.log("model has been loaded");
 };
 
 function gotposes() {
-    console.log(results);
+
+    if (results.legnth > 0) {
+        console.log(results);
+        lw_X = results[0].pose.leftWrist.x;
+        rw_X = results[0].pose.rightWrist.x;
+        difference = floor(lw_X - rw_X);
+    };
+
+
+}
+
+function gotposes(results) {
+    if (results.length > 0) {
+        console.log(results)
+        lw_X = results[0].pose.leftWrist.x;
+        rw_X = results[0].pose.rightWrist.x;
+        difference = floor(lw_X - rw_X);
+        console.log("left wrist x=" + lw_X + "right wrist x=" + rw_X + "difference=" + difference)
+    }
 }
